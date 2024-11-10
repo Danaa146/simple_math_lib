@@ -77,3 +77,20 @@ TEST_F(MathLibTestFixture, GreatestCommonDivider)
 {
     EXPECT_EQ(MathLib::GCD(10, 6), 2);
 }
+
+
+TEST_F(MathLibTestFixture, FibonacciValidValues)
+{
+    EXPECT_EQ(MathLib::fibonacci(0), 0);
+    EXPECT_EQ(MathLib::fibonacci(1), 1);
+    EXPECT_EQ(MathLib::fibonacci(2), 1);
+    EXPECT_EQ(MathLib::fibonacci(3), 2);
+    EXPECT_EQ(MathLib::fibonacci(4), 3);
+    EXPECT_EQ(MathLib::fibonacci(5), 5);
+    EXPECT_EQ(MathLib::fibonacci(10), 55);
+}
+
+TEST_F(MathLibTestFixture, FibonacciNegativeValue)
+{
+    EXPECT_THROW(MathLib::fibonacci(-5), std::invalid_argument);
+}

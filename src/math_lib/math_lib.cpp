@@ -42,5 +42,28 @@ namespace MathLib
 		if (b == 0) return a;
 		return GCD(b, a % b);
 	}
+
+    int fibonacci(int n)
+    {
+        if (n < 0)
+            throw std::invalid_argument("Fibonacci is not defined for negative numbers.");
+        if (n == 0)
+            return 0;
+        if (n == 1)
+            return 1;
+
+        int a = 0;
+        int b = 1;
+        int fib = 0;
+
+        for (int i = 2; i <= n; i++)
+        {
+            fib = a + b;
+            a = b;
+            b = fib;
+        }
+
+        return fib;
+    }
 }
 
