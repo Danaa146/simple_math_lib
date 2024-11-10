@@ -43,6 +43,7 @@ namespace MathLib
 		return GCD(b, a % b);
 	}
 
+
     int fibonacci(int n)
     {
         if (n < 0)
@@ -66,4 +67,10 @@ namespace MathLib
         return fib;
     }
 }
+
+
+    template double average(const double* number, size_t size);
+}
+
+
 

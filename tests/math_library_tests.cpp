@@ -79,6 +79,7 @@ TEST_F(MathLibTestFixture, GreatestCommonDivider)
 }
 
 
+
 TEST_F(MathLibTestFixture, FibonacciValidValues)
 {
     EXPECT_EQ(MathLib::fibonacci(0), 0);
@@ -94,3 +95,10 @@ TEST_F(MathLibTestFixture, FibonacciNegativeValue)
 {
     EXPECT_THROW(MathLib::fibonacci(-5), std::invalid_argument);
 }
+
+TEST_f(MathLibTestFixture, AverageDoobleArray) {
+    double numbers[] = {1.5, 2.5, 3.5, 4.5, 5.5};
+    size_t size = sizeof(numbers) / sizeof(numbers[0]);
+    EXPECT_DOUBLE_EQ(MathLib::average(numbers, size), 3.5);
+}
+
